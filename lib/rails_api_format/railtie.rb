@@ -10,7 +10,7 @@ module RailsApiFormat
           manager.failure_app = DeviseFailureApp
         end
       end
-    end
+    end if defined?(Devise)
 
     initializer "rails_api_format.responder" do
       ActionController::API.responder = Responder
